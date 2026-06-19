@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Space+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Teko", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "Space Mono", monospace;
+  --animate-marquee: marquee 35s linear infinite;
+  --animate-float-one: float-one 7s ease-in-out infinite;
+  --animate-float-two: float-two 9s ease-in-out infinite 1.2s;
+  --animate-float-three: float-three 6s ease-in-out infinite 2.4s;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float-one {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-12deg);
+  }
+  50% {
+    transform: translateY(-26px) rotate(-7deg);
+  }
+}
+
+@keyframes float-two {
+  0%,
+  100% {
+    transform: translateY(0) rotate(16deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(21deg);
+  }
+}
+
+@keyframes float-three {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(2deg);
+  }
+}
+
+:root {
+  color: #f5f5f5;
+  background: #111111;
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100svh;
+  background: #111111;
+}
+
+#root {
+  min-height: 100svh;
+}
